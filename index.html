@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Teresa Herreros · Depilación láser y estética unisex</title>  
+<title>Teresa Herreros · Depilación láser y estética unisex</title>
 <link rel="icon" type="image/jpeg" href="img/logo.jpg">
 <link rel="apple-touch-icon" href="img/logo.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -37,6 +37,10 @@ a:focus-visible{outline:2px solid #1565B5;outline-offset:3px}
 .starbtn{font-size:2.4rem;line-height:1;color:#d4dbe3;background:none;border:0;cursor:pointer;padding:.1rem .2rem;transition:color .15s,transform .15s}
 .starbtn.on,.starbtn:hover{color:#F5B301;transform:scale(1.12)}
 .evo{border:1px solid #4AA8E0;padding:1rem;background:#fff}
+.more-btn{display:inline-flex;align-items:center;gap:.6rem}
+.more-btn .ic{transition:transform .25s}
+.more-btn[aria-expanded="true"] .ic{transform:rotate(180deg)}
+.more-btn:hover{transform:translateY(-1px)}
 .ph{background:#EEF5FB;border:1px dashed #1565B5;padding:2.5rem 1.5rem;text-align:center;color:#0B3A73}
 .ph button{margin-top:1rem}
 #cc-main .cm{bottom:calc(96px + env(safe-area-inset-bottom,0px)) !important;right:max(16px,env(safe-area-inset-right,0px)) !important;max-width:min(26rem,calc(100vw - 32px)) !important}
@@ -119,8 +123,7 @@ a:focus-visible{outline:2px solid #1565B5;outline-offset:3px}
       <h3 class="h-xl text-5xl md:text-6xl mt-2">Depilación láser de diodo</h3>
       <p class="mt-3 font-display text-2xl italic text-navy">Piel suave, resultados duraderos y máxima eficacia</p>
       <p class="mt-6 text-lg leading-relaxed max-w-lg text-neutral-700">En nuestro centro trabajamos con tecnología de láser de diodo, un tratamiento avanzado diseñado para reducir progresivamente el vello y conseguir una piel más suave, fina y libre de pelo.</p>
-      <div class="mt-6 flex flex-wrap gap-3 text-brand"><span class="chip">Reducción progresiva</span><span class="chip">Valoración individual</span><span class="chip">Para ellas y ellos</span></div>
-      <button type="button" data-more="more-diodo" aria-expanded="false" aria-controls="more-diodo" class="mt-6 border border-brand text-brand hover:bg-brand hover:text-white px-7 py-3 cap text-xs transition">Ver más</button>
+      <button type="button" data-more="more-diodo" aria-expanded="false" aria-controls="more-diodo" class="more-btn mt-6 bg-brand text-white hover:bg-navy px-8 py-3.5 cap text-xs shadow-lg transition">Ver más</button><span class="lbl">Ver más</span><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
       <div id="more-diodo" class="hidden">
 <p class="mt-4 leading-relaxed max-w-lg text-neutral-700">El láser actúa sobre la melanina del folículo piloso mediante energía lumínica, debilitándolo progresivamente e impidiendo que vuelva a producir vello con la misma fuerza.</p>
 
@@ -176,8 +179,7 @@ a:focus-visible{outline:2px solid #1565B5;outline-offset:3px}
       <p class="mt-6 text-lg leading-relaxed max-w-lg text-white/80">En nuestro centro contamos con el sistema Blauman de Milesman, una tecnología láser diseñada para realizar tratamientos localizados sobre determinadas lesiones superficiales de la piel.</p>
       <p class="mt-4 leading-relaxed max-w-lg text-white/75">Su aplicación permite trabajar de forma precisa sobre lesiones seleccionadas, ayudando a mejorar el aspecto y la uniformidad de la piel.</p>
 
-      <div class="mt-6 flex flex-wrap gap-3 text-sky"><span class="chip">Tratamiento localizado</span><span class="chip">Valoración previa</span><span class="chip">Personalizado</span></div>
-      <button type="button" data-more="more-blauman" aria-expanded="false" aria-controls="more-blauman" class="mt-6 border border-sky text-sky hover:bg-sky hover:text-navy px-7 py-3 cap text-xs transition">Ver más</button>
+      <button type="button" data-more="more-blauman" aria-expanded="false" aria-controls="more-blauman" class="more-btn mt-6 bg-white text-navy hover:bg-sky hover:text-white px-8 py-3.5 cap text-xs shadow-lg transition">Ver más</button><span class="lbl">Ver más</span><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
       <div id="more-blauman" class="hidden">
 <h4 class="mt-8 font-display text-2xl text-sky">¿Qué podemos tratar?</h4>
       <p class="mt-2 leading-relaxed max-w-lg text-white/75">Tras una valoración previa, el tratamiento puede estar indicado para determinadas lesiones benignas, como:</p>
@@ -219,7 +221,7 @@ a:focus-visible{outline:2px solid #1565B5;outline-offset:3px}
       <p class="mt-3 font-display text-2xl italic text-navy">Reafirmación, remodelación y cuidado de la piel</p>
       <p class="mt-6 text-lg leading-relaxed max-w-lg text-neutral-700">Tratamiento de radiofrecuencia de alta potencia que combina tecnología y masaje manual mediante manguitos conductores.</p>
       <p class="mt-4 leading-relaxed max-w-lg text-neutral-700">Ayuda a estimular la producción natural de colágeno y elastina, mejorar la firmeza y elasticidad de la piel y redefinir el contorno facial y corporal.</p>
-      <button type="button" data-more="more-rf" aria-expanded="false" aria-controls="more-rf" class="mt-8 border border-brand text-brand hover:bg-brand hover:text-white px-7 py-3 cap text-xs transition">Ver más</button>
+      <button type="button" data-more="more-rf" aria-expanded="false" aria-controls="more-rf" class="more-btn mt-6 bg-brand text-white hover:bg-navy px-8 py-3.5 cap text-xs shadow-lg transition">Ver más</button><span class="lbl">Ver más</span><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
       <div id="more-rf" class="hidden">
 <h4 class="mt-8 font-display text-2xl text-navy">Beneficios</h4>
       <ul class="mt-3 list-disc pl-5 space-y-1 max-w-lg text-neutral-700">
@@ -240,9 +242,30 @@ a:focus-visible{outline:2px solid #1565B5;outline-offset:3px}
   <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-12 gap-16 items-center">
     <div class="md:col-span-5 md:pr-4 md:order-1 order-2">
       <p class="tag text-brand">Última tecnología</p>
-      <h3 class="h-xl text-5xl md:text-6xl mt-2">Higiene facial con láser azul</h3>
-      <p class="mt-6 text-lg leading-relaxed max-w-lg text-neutral-700">Limpieza facial profunda con láser azul, para una piel más limpia y cuidada desde la primera sesión.</p>
-      <p class="mt-4 leading-relaxed max-w-lg text-neutral-700">Combina la limpieza profunda de la piel con la luz azul del láser Milesman Blauman (445 nm), con valoración previa para adaptar el protocolo al estado de tu piel.</p>
+      <h3 class="h-xl text-5xl mt-2">Higiene facial con láser azul Blauman</h3>
+      <p class="mt-3 font-display text-2xl italic text-navy">La nueva generación de higiene facial. ¡Consigue el efecto Glow!</p>
+      <p class="mt-6 text-lg leading-relaxed max-w-lg text-neutral-700">La tecnología Blauman de Milesman combina dos técnicas de limpieza facial para conseguir una higiene más completa y profunda.</p>
+      <button type="button" data-more="more-higiene" aria-expanded="false" aria-controls="more-higiene" class="more-btn mt-6 bg-brand text-white hover:bg-navy px-8 py-3.5 cap text-xs shadow-lg transition">Ver más</button><span class="lbl">Ver más</span><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <div id="more-higiene" class="hidden">
+        <h4 class="mt-8 font-display text-2xl text-navy">Higiene horizontal</h4>
+        <p class="mt-2 leading-relaxed max-w-lg text-neutral-700">Mediante la exfoliación y la microdermoabrasión se eliminan las células muertas de la superficie cutánea, mejorando la textura y uniformidad de la piel y aportando luminosidad.</p>
+
+        <h4 class="mt-8 font-display text-2xl text-navy">Higiene vertical con láser azul</h4>
+        <p class="mt-2 leading-relaxed max-w-lg text-neutral-700">El láser azul de 450 nm actúa sobre los canales foliculares, ayudando a desobstruirlos, eliminar acumulaciones de sebo y ejercer una acción bactericida superficial.</p>
+
+        <h4 class="mt-8 font-display text-2xl text-navy">Beneficios</h4>
+        <ul class="mt-3 list-disc pl-5 space-y-1 max-w-lg text-neutral-700">
+          <li>Limpieza más profunda de los poros.</li>
+          <li>Ayuda a eliminar obstrucciones de sebo.</li>
+          <li>Acción bactericida superficial.</li>
+          <li>Mejora el aspecto de las pieles grasas.</li>
+          <li>Piel más uniforme, fresca y luminosa.</li>
+          <li>Mejora la apariencia de la textura cutánea.</li>
+        </ul>
+
+        <p class="mt-10 font-display italic text-3xl text-navy">El resultado: efecto Glow</p>
+        <p class="mt-2 leading-relaxed max-w-lg text-neutral-700">Una piel más limpia, fresca, luminosa y de aspecto saludable. ¡Luce una piel radiante!</p>
+      </div>
     </div>
     <div class="md:col-span-7 frame aspect-[1092/592] md:order-2 order-1"><img loading="lazy" src="img/higiene-facial.jpg" alt="Equipo Milesman Blauman y lesiones cutáneas que se pueden tratar"></div>
   </div>
@@ -431,7 +454,7 @@ const GOOGLE = {
   document.addEventListener('keydown',function(e){if(e.key==='Escape')tog(false)});
   window.addEventListener('resize',function(){if(innerWidth>=1024)tog(false)});
 
-  [].forEach.call(document.querySelectorAll('[data-more]'),function(bt){var box=document.getElementById(bt.getAttribute('data-more'));bt.addEventListener('click',function(){var open=box.classList.toggle('hidden')===false;bt.setAttribute('aria-expanded',open);bt.textContent=open?'Ver menos':'Ver más'})});
+  [].forEach.call(document.querySelectorAll('[data-more]'),function(bt){var box=document.getElementById(bt.getAttribute('data-more'));bt.addEventListener('click',function(){var open=box.classList.toggle('hidden')===false;bt.setAttribute('aria-expanded',open);bt.querySelector('.lbl').textContent=open?'Ver menos':'Ver más'})});
 
   var ck=document.getElementById('legal-ok'),wa=document.getElementById('wa-cita');
   ck.checked=false;
