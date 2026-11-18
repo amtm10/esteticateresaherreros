@@ -326,7 +326,7 @@ a:focus-visible{outline:2px solid #1565B5;outline-offset:3px}
   </div>
 </section>
 
-<section id="resultados" class="py-24 bg-navy text-white scroll-mt-20" hidden>
+<section id="resultados" class="py-24 bg-navy text-white scroll-mt-20">
   <div class="max-w-6xl mx-auto px-5">
     <div class="text-center">
       <p class="cap text-sky text-xs">Resultados reales</p>
@@ -334,10 +334,10 @@ a:focus-visible{outline:2px solid #1565B5;outline-offset:3px}
       <p class="mt-5 text-lg text-white/80 max-w-xl mx-auto">Para ver imágenes reales de nuestros tratamientos, sigue nuestro Instagram. Esta galería se actualiza sola cada vez que publicamos. Los resultados pueden variar de una persona a otra.</p>
     </div>
     <div class="mt-12 mx-auto max-w-xl bg-white p-3 shadow-xl">
-      <iframe id="ig-frame" title="Perfil de Instagram de Teresa Herreros" class="w-full block border-0" style="height:720px" loading="lazy" scrolling="yes" allowtransparency="true"></iframe>
+      <iframe id="ig-frame" src="https://www.instagram.com/teresa_herreros_/embed" title="Perfil de Instagram de Teresa Herreros (@teresa_herreros_)" class="w-full block border-0" style="height:760px" loading="lazy" scrolling="yes" allowtransparency="true"></iframe>
     </div>
     <div class="mt-8 text-center">
-      <a id="ig-link" href="https://www.instagram.com/" target="_blank" rel="noopener" class="inline-block bg-white text-navy px-8 py-4 cap text-xs hover:bg-sky hover:text-white transition">Ver el perfil en Instagram</a>
+      <a id="ig-link" href="https://www.instagram.com/teresa_herreros_/" target="_blank" rel="noopener" class="inline-block bg-white text-navy px-8 py-4 cap text-xs hover:bg-sky hover:text-white transition">Ver el perfil en Instagram</a>
     </div>
   </div>
 </section>
@@ -462,18 +462,6 @@ const GOOGLE = {
 <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.umd.js"></script>
 <script>
 (function(){
-  /* ===== INSTAGRAM: escribe aquí el usuario SIN @ (ej.: 'teresaherreros'). Mientras esté vacío, la sección se oculta. ===== */
-  var IG_USER='';
-
-  var igSec=document.getElementById('resultados');
-  if(IG_USER){
-    document.getElementById('ig-frame').src='https://www.instagram.com/'+IG_USER+'/embed';
-    document.getElementById('ig-link').href='https://www.instagram.com/'+IG_USER+'/';
-    igSec.hidden=false;
-  }else{
-    [].forEach.call(document.querySelectorAll('[data-ig-link]'),function(a){a.remove()});
-  }
-
   var b=document.getElementById('burger'),n=document.getElementById('mnav');
   function tog(o){b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Cerrar menú':'Abrir menú');n.classList.toggle('hidden',!o)}
   b.addEventListener('click',function(){tog(b.getAttribute('aria-expanded')!=='true')});
