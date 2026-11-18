@@ -23,11 +23,9 @@ a:focus-visible{outline:2px solid #1565B5;outline-offset:3px}
 .frame{position:relative}
 .frame::before{content:"";position:absolute;inset:0;transform:translate(16px,16px);border:1px solid #4AA8E0}
 .frame img{position:relative;display:block;width:100%;height:100%;object-fit:cover}
-.chip{border:1px solid currentColor;opacity:.85;padding:.35rem .9rem;font-size:.85rem;letter-spacing:.04em}
 .prod{background:#fff;display:flex;align-items:center;justify-content:center;padding:2.5rem}
 .frame .prod img{object-fit:contain;height:auto}
 .stars{color:#F5B301;letter-spacing:.1em}
-.mapbg{background-color:#EEF5FB;background-image:linear-gradient(#1565B51a 1px,transparent 1px),linear-gradient(90deg,#1565B51a 1px,transparent 1px);background-size:36px 36px}
 .wa{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:50;width:60px;height:60px;border-radius:9999px;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.25)}
 .burger{width:44px;height:44px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
 .burger span{display:block;width:24px;height:2px;background:#0B3A73;transition:transform .25s,opacity .2s}
@@ -36,13 +34,10 @@ a:focus-visible{outline:2px solid #1565B5;outline-offset:3px}
 .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
 .starbtn{font-size:2.4rem;line-height:1;color:#d4dbe3;background:none;border:0;cursor:pointer;padding:.1rem .2rem;transition:color .15s,transform .15s}
 .starbtn.on,.starbtn:hover{color:#F5B301;transform:scale(1.12)}
-.evo{border:1px solid #4AA8E0;padding:1rem;background:#fff}
 .more-btn{display:inline-flex;align-items:center;gap:.6rem}
 .more-btn .ic{transition:transform .25s}
 .more-btn[aria-expanded="true"] .ic{transform:rotate(180deg)}
 .more-btn:hover{transform:translateY(-1px)}
-.ph{background:#EEF5FB;border:1px dashed #1565B5;padding:2.5rem 1.5rem;text-align:center;color:#0B3A73}
-.ph button{margin-top:1rem}
 #cc-main .cm{bottom:calc(96px + env(safe-area-inset-bottom,0px)) !important;right:max(16px,env(safe-area-inset-right,0px)) !important;max-width:min(26rem,calc(100vw - 32px)) !important}
 #cc-main{--cc-font-family:'Jost',system-ui,sans-serif;--cc-btn-primary-bg:#1565B5;--cc-btn-primary-border-color:#1565B5;--cc-btn-primary-hover-bg:#0B3A73;--cc-btn-primary-hover-border-color:#0B3A73;--cc-btn-secondary-bg:#EEF5FB;--cc-btn-secondary-color:#0B3A73;--cc-btn-secondary-hover-bg:#dbe9f6;--cc-btn-secondary-hover-color:#0B3A73;--cc-btn-secondary-border-color:#EEF5FB;--cc-toggle-on-bg:#1565B5}
 </style>
@@ -61,7 +56,7 @@ a:focus-visible{outline:2px solid #1565B5;outline-offset:3px}
     </a>
     <nav class="hidden lg:flex gap-8 text-[15px]">
       <a href="#tratamientos" class="hover:text-brand">Tratamientos</a>
-      <a href="#resultados" class="hover:text-brand">Resultados</a>
+      <a href="#resultados" class="hover:text-brand" data-ig-link>Resultados</a>
       <a href="#video" class="hover:text-brand">En cabina</a>
       <a href="#opiniones" class="hover:text-brand">Opiniones</a>
       <a href="#contacto" class="hover:text-brand">Contacto</a>
@@ -71,7 +66,7 @@ a:focus-visible{outline:2px solid #1565B5;outline-offset:3px}
   <nav id="mnav" class="hidden lg:hidden absolute top-full inset-x-0 bg-white border-b border-black/10 shadow-lg" aria-label="Menú principal">
     <div class="max-w-6xl mx-auto px-5 py-3 flex flex-col text-lg">
       <a href="#tratamientos" class="py-3.5 border-b border-black/5">Tratamientos</a>
-      <a href="#resultados" class="py-3.5 border-b border-black/5">Resultados</a>
+      <a href="#resultados" class="py-3.5 border-b border-black/5" data-ig-link>Resultados</a>
       <a href="#video" class="py-3.5 border-b border-black/5">En cabina</a>
       <a href="#opiniones" class="py-3.5 border-b border-black/5">Opiniones</a>
       <a href="#contacto" class="py-3.5">Contacto</a>
@@ -125,7 +120,7 @@ a:focus-visible{outline:2px solid #1565B5;outline-offset:3px}
       <p class="mt-6 text-lg leading-relaxed max-w-lg text-neutral-700">En nuestro centro trabajamos con tecnología de láser de diodo, un tratamiento avanzado diseñado para reducir progresivamente el vello y conseguir una piel más suave, fina y libre de pelo.</p>
       <button type="button" data-more="more-diodo" aria-expanded="false" aria-controls="more-diodo" class="more-btn mt-6 bg-brand text-white hover:bg-navy px-8 py-3.5 cap text-xs shadow-lg transition"><span class="lbl">Ver más</span><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
       <div id="more-diodo" class="hidden">
-<p class="mt-4 leading-relaxed max-w-lg text-neutral-700">El láser actúa sobre la melanina del folículo piloso mediante energía lumínica, debilitándolo progresivamente e impidiendo que vuelva a producir vello con la misma fuerza.</p>
+      <p class="mt-4 leading-relaxed max-w-lg text-neutral-700">El láser actúa sobre la melanina del folículo piloso mediante energía lumínica, debilitándolo progresivamente e impidiendo que vuelva a producir vello con la misma fuerza.</p>
 
       <h4 class="mt-8 font-display text-2xl text-navy">¿Cada cuánto se realizan las sesiones?</h4>
       <p class="mt-2 leading-relaxed max-w-lg text-neutral-700">La periodicidad depende de la zona tratada, del crecimiento del vello y de las características de cada persona. Como orientación general:</p>
@@ -155,18 +150,7 @@ a:focus-visible{outline:2px solid #1565B5;outline-offset:3px}
 
       <h4 class="mt-8 font-display text-2xl text-navy">Tu tratamiento, personalizado</h4>
       <p class="mt-2 leading-relaxed max-w-lg text-neutral-700">Antes de comenzar realizamos una valoración individual para adaptar los parámetros del láser a tu tipo de piel, características del vello y zona a tratar. En nuestro centro apostamos por la tecnología, la experiencia y el cuidado personalizado para ayudarte a conseguir los mejores resultados.</p>
-
-            </div>
-    </div>
-  </div>
-  <div id="resultados" class="max-w-5xl mx-auto px-5 mt-20 scroll-mt-24">
-    <div class="evo grid md:grid-cols-12 gap-8 items-center">
-      <div class="md:col-span-5">
-        <p class="cap text-brand text-xs">Evolución · Depilación láser</p>
-        <h4 class="h-xl text-3xl mt-3">Resultados que se ven</h4>
-        <p class="mt-4 leading-relaxed text-neutral-700">Cada plan se diseña tras una valoración, según tu tipo de piel y de vello. Los resultados pueden variar de una persona a otra.</p>
       </div>
-      <div class="md:col-span-7"><img loading="lazy" src="img/resultados.jpg" alt="Antes y después de depilación láser en la pierna" class="w-full aspect-[4/3] object-cover object-[50%_55%]"></div>
     </div>
   </div>
 </section>
@@ -181,7 +165,7 @@ a:focus-visible{outline:2px solid #1565B5;outline-offset:3px}
 
       <button type="button" data-more="more-blauman" aria-expanded="false" aria-controls="more-blauman" class="more-btn mt-6 bg-white text-navy hover:bg-sky hover:text-white px-8 py-3.5 cap text-xs shadow-lg transition"><span class="lbl">Ver más</span><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
       <div id="more-blauman" class="hidden">
-<h4 class="mt-8 font-display text-2xl text-sky">¿Qué podemos tratar?</h4>
+      <h4 class="mt-8 font-display text-2xl text-sky">¿Qué podemos tratar?</h4>
       <p class="mt-2 leading-relaxed max-w-lg text-white/75">Tras una valoración previa, el tratamiento puede estar indicado para determinadas lesiones benignas, como:</p>
       <ul class="mt-3 list-disc pl-5 space-y-1 max-w-lg text-white/75">
         <li>Fibromas blandos o pequeñas verrugas cutáneas.</li>
@@ -202,8 +186,7 @@ a:focus-visible{outline:2px solid #1565B5;outline-offset:3px}
 
       <p class="mt-10 font-display italic text-3xl">Tu piel, en buenas manos</p>
       <p class="mt-2 leading-relaxed max-w-lg text-white/75">En Teresa Herreros apostamos por la tecnología y la atención personalizada para ofrecer tratamientos adaptados a las necesidades de cada piel.</p>
-
-            </div>
+      </div>
     </div>
     <div class="md:col-span-5 md:order-2 order-1 relative">
       <div class="frame aspect-[4/5]"><img loading="lazy" src="img/laser-azul-aplicacion.jpg" alt="Aplicación del láser azul Milesman Blauman sobre la piel"></div>
@@ -223,7 +206,7 @@ a:focus-visible{outline:2px solid #1565B5;outline-offset:3px}
       <p class="mt-4 leading-relaxed max-w-lg text-neutral-700">Ayuda a estimular la producción natural de colágeno y elastina, mejorar la firmeza y elasticidad de la piel y redefinir el contorno facial y corporal.</p>
       <button type="button" data-more="more-rf" aria-expanded="false" aria-controls="more-rf" class="more-btn mt-6 bg-brand text-white hover:bg-navy px-8 py-3.5 cap text-xs shadow-lg transition"><span class="lbl">Ver más</span><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
       <div id="more-rf" class="hidden">
-<h4 class="mt-8 font-display text-2xl text-navy">Beneficios</h4>
+      <h4 class="mt-8 font-display text-2xl text-navy">Beneficios</h4>
       <ul class="mt-3 list-disc pl-5 space-y-1 max-w-lg text-neutral-700">
         <li>Mejora la firmeza y elasticidad de la piel.</li>
         <li>Ayuda a combatir la flacidez.</li>
@@ -271,58 +254,90 @@ a:focus-visible{outline:2px solid #1565B5;outline-offset:3px}
   </div>
 </section>
 
-<section class="py-24">
-  <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-3 gap-6">
-    <article class="border border-brand/25 p-9"><p class="tag text-brand">Opphalo</p><h3 class="h-xl text-4xl mt-2">Presoterapia</h3><p class="mt-4 leading-relaxed text-neutral-700">Presoterapia corporal y ocular.</p><p class="mt-3 leading-relaxed text-neutral-700 text-[15px]">Aplica presión de aire controlada mediante cámaras que se inflan de forma secuencial para estimular la circulación venosa y linfática y favorecer el drenaje de líquidos. Es no invasiva, indolora y sin tiempo de recuperación. No es un método para adelgazar y tiene contraindicaciones (por ejemplo, problemas circulatorios graves), por eso se valora antes.</p></article>
-    <article class="border border-brand/25 p-9"><p class="tag text-brand">Exosomas, péptidos y vitaminas</p><h3 class="h-xl text-4xl mt-2">Dermapen</h3><p class="mt-4 leading-relaxed text-neutral-700">Dermapen combinado con exosomas, péptidos y vitaminas para cuidar tu piel.</p><p class="mt-3 leading-relaxed text-neutral-700 text-[15px]">El Dermapen es un dispositivo de microneedling: realiza microperforaciones controladas que activan la regeneración natural de la piel y la producción de colágeno y elastina. Se emplea para mejorar la textura y el tono, atenuar cicatrices de acné, líneas finas y poros dilatados, y facilita la absorción de los activos aplicados. Tras la sesión es normal un enrojecimiento temporal; se recomienda fotoprotección.</p></article>
-    <article class="border border-brand/25 p-9"><p class="tag text-brand">A tu medida</p><h3 class="h-xl text-4xl mt-2">Tratamientos faciales</h3><p class="mt-4 leading-relaxed text-neutral-700">Protocolos faciales personalizados tras valorar tu piel.</p><p class="mt-3 leading-relaxed text-neutral-700 text-[15px]">Cada protocolo se diseña a partir de una valoración de tu piel (tipo, sensibilidad, objetivos) y combina limpieza, activos y tecnología según lo que necesite, sin tratamientos genéricos.</p></article>
+<section id="presoterapia" class="py-20">
+  <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-12 gap-16 items-center">
+    <div class="md:col-span-5 frame"><img loading="lazy" src="img/presoterapia.jpg" alt="Presoterapia Ópphalo KiesPress 24: equipo y prendas de presoterapia" width="1071" height="789" class="w-full h-auto"></div>
+    <div class="md:col-span-7 md:pl-8">
+      <p class="tag text-brand">Ópphalo KiesPress 24</p>
+      <h3 class="h-xl text-5xl md:text-6xl mt-2">Presoterapia</h3>
+      <p class="mt-3 font-display text-2xl italic text-navy">Drenaje, circulación y bienestar corporal</p>
+      <p class="mt-6 text-lg leading-relaxed max-w-lg text-neutral-700">La presoterapia Ópphalo KiesPress 24 es un tratamiento corporal no invasivo que utiliza presión de aire controlada y secuencial para estimular el drenaje linfático y favorecer el retorno venoso.</p>
+      <button type="button" data-more="more-presoterapia" aria-expanded="false" aria-controls="more-presoterapia" class="more-btn mt-6 bg-brand text-white hover:bg-navy px-8 py-3.5 cap text-xs shadow-lg transition"><span class="lbl">Ver más</span><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <div id="more-presoterapia" class="hidden">
+        <p class="mt-4 leading-relaxed max-w-lg text-neutral-700">Mediante unas prendas especiales que se adaptan al cuerpo, realiza un masaje de compresión progresiva que ayuda a movilizar los líquidos acumulados, mejorar la sensación de piernas cansadas y proporcionar una agradable sensación de ligereza y bienestar.</p>
+
+        <h4 class="mt-8 font-display text-2xl text-navy">¿Para qué sirve? Beneficios</h4>
+        <ul class="mt-3 list-disc pl-5 space-y-1 max-w-lg text-neutral-700">
+          <li>Favorece el drenaje linfático.</li>
+          <li>Ayuda a combatir la retención de líquidos.</li>
+          <li>Estimula el retorno venoso.</li>
+          <li>Alivia la sensación de piernas cansadas y pesadas.</li>
+          <li>Ayuda a mejorar el aspecto de la celulitis asociada a la retención de líquidos.</li>
+          <li>Favorece la sensación de ligereza y bienestar corporal.</li>
+          <li>Complementa los tratamientos estéticos corporales.</li>
+        </ul>
+
+        <h4 class="mt-8 font-display text-2xl text-navy">Indicaciones</h4>
+        <p class="mt-2 leading-relaxed max-w-lg text-neutral-700">Especialmente recomendada para personas con:</p>
+        <ul class="mt-3 list-disc pl-5 space-y-1 max-w-lg text-neutral-700">
+          <li>Retención de líquidos.</li>
+          <li>Piernas cansadas o pesadas.</li>
+          <li>Sensación de hinchazón en las extremidades.</li>
+          <li>Celulitis con componente edematoso.</li>
+          <li>Necesidad de mejorar el bienestar circulatorio.</li>
+        </ul>
+
+        <h4 class="mt-8 font-display text-2xl text-navy">Contraindicaciones</h4>
+        <p class="mt-2 leading-relaxed max-w-lg text-neutral-700">No se recomienda en caso de:</p>
+        <ul class="mt-3 list-disc pl-5 space-y-1 max-w-lg text-neutral-700">
+          <li>Trombosis venosa profunda o sospecha de trombosis.</li>
+          <li>Insuficiencia cardíaca descompensada.</li>
+          <li>Enfermedad arterial periférica grave.</li>
+          <li>Infecciones o inflamaciones agudas.</li>
+          <li>Insuficiencia renal grave.</li>
+          <li>Heridas abiertas en las zonas de aplicación.</li>
+        </ul>
+        <p class="mt-3 leading-relaxed max-w-lg text-neutral-700">En caso de embarazo, hipertensión no controlada, varices importantes, antecedentes cardiovasculares, cirugía reciente o enfermedades relevantes, será necesaria una valoración médica previa.</p>
+
+        <p class="mt-8 leading-relaxed max-w-lg text-neutral-700">En Teresa Herreros Centro de Estética Avanzada realizamos una valoración personalizada antes de cada tratamiento para garantizar una experiencia adaptada a tus necesidades y bienestar.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="evoluciones" class="py-24">
+<section id="dermapen" class="py-20 bg-mist">
+  <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-12 gap-16 items-center">
+    <div class="md:col-span-7 md:pr-8 md:order-1 order-2">
+      <p class="tag text-brand">Exosomas, péptidos y vitaminas</p>
+      <h3 class="h-xl text-5xl md:text-6xl mt-2">Dermapen</h3>
+      <p class="mt-6 text-lg leading-relaxed max-w-lg text-neutral-700">Dermapen combinado con exosomas, péptidos y vitaminas para cuidar tu piel.</p>
+      <button type="button" data-more="more-dermapen" aria-expanded="false" aria-controls="more-dermapen" class="more-btn mt-6 bg-brand text-white hover:bg-navy px-8 py-3.5 cap text-xs shadow-lg transition"><span class="lbl">Ver más</span><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <div id="more-dermapen" class="hidden">
+        <p class="mt-4 leading-relaxed max-w-lg text-neutral-700">El Dermapen es un dispositivo de microneedling: realiza microperforaciones controladas que activan la regeneración natural de la piel y la producción de colágeno y elastina. Se emplea para mejorar la textura y el tono, atenuar cicatrices de acné, líneas finas y poros dilatados, y facilita la absorción de los activos aplicados. Tras la sesión es normal un enrojecimiento temporal; se recomienda fotoprotección.</p>
+      </div>
+    </div>
+    <div class="md:col-span-5 md:order-2 order-1"><div class="frame"><img loading="lazy" src="img/dermapen.jpg" alt="Protocolo SkinExpert Advance con Dermapen AdvancePen aplicado en el rostro" width="1170" height="1374" class="w-full h-auto"></div></div>
+  </div>
+</section>
+
+<section class="py-20">
+  <div class="max-w-3xl mx-auto px-5">
+    <article class="border border-brand/25 p-9 md:p-12 text-center"><p class="tag text-brand">A tu medida</p><h3 class="h-xl text-4xl md:text-5xl mt-2">Tratamientos faciales</h3><p class="mt-4 text-lg leading-relaxed text-neutral-700">Protocolos faciales personalizados tras valorar tu piel.</p><p class="mt-3 leading-relaxed text-neutral-700">Cada protocolo se diseña a partir de una valoración de tu piel (tipo, sensibilidad, objetivos) y combina limpieza, activos y tecnología según lo que necesite, sin tratamientos genéricos.</p></article>
+  </div>
+</section>
+
+<section id="resultados" class="py-24 bg-navy text-white scroll-mt-20" hidden>
   <div class="max-w-6xl mx-auto px-5">
-    <p class="cap text-brand text-xs">Evolución</p>
-    <h2 class="h-xl text-5xl md:text-6xl mt-4">Resultados reales</h2>
-    <p class="mt-4 text-lg text-neutral-700 max-w-xl">Algunos de nuestros casos, tal y como los publicamos en Instagram. Los resultados pueden variar de una persona a otra.</p>
-    <div class="mt-12 grid md:grid-cols-2 gap-10">
-      <div class="flex justify-center bg-white p-4 border border-brand/15 shadow-sm">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DWo31-MjJ_e/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-          <div style="padding:16px;">
-            <a href="https://www.instagram.com/p/DWo31-MjJ_e/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank" rel="noopener">
-              <div style="display: flex; flex-direction: row; align-items: center;">
-                <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
-                <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
-                  <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div>
-                  <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div>
-                </div>
-              </div>
-              <div style="padding: % 0;"></div>
-              <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 50px;">
-                <p style="font-family:Arial,sans-serif; font-size:14px; font-weight:600; line-height:18px; margin:0 0 0 0; text-align:center;">Ver esta publicación en Instagram</p>
-              </div>
-            </a>
-          </div>
-        </blockquote>
-      </div>
-      <div class="flex justify-center bg-white p-4 border border-brand/15 shadow-sm">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYkd3QvFkXc/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-          <div style="padding:16px;">
-            <a href="https://www.instagram.com/p/DYkd3QvFkXc/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank" rel="noopener">
-              <div style="display: flex; flex-direction: row; align-items: center;">
-                <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
-                <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
-                  <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div>
-                  <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div>
-                </div>
-              </div>
-              <div style="padding: % 0;"></div>
-              <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 50px;">
-                <p style="font-family:Arial,sans-serif; font-size:14px; font-weight:600; line-height:18px; margin:0 0 0 0; text-align:center;">Ver esta publicación en Instagram</p>
-              </div>
-            </a>
-          </div>
-        </blockquote>
-      </div>
+    <div class="text-center">
+      <p class="cap text-sky text-xs">Resultados reales</p>
+      <h2 class="h-xl text-5xl md:text-6xl mt-4">Nuestros tratamientos en Instagram</h2>
+      <p class="mt-5 text-lg text-white/80 max-w-xl mx-auto">Para ver imágenes reales de nuestros tratamientos, sigue nuestro Instagram. Esta galería se actualiza sola cada vez que publicamos. Los resultados pueden variar de una persona a otra.</p>
+    </div>
+    <div class="mt-12 mx-auto max-w-xl bg-white p-3 shadow-xl">
+      <iframe id="ig-frame" title="Perfil de Instagram de Teresa Herreros" class="w-full block border-0" style="height:720px" loading="lazy" scrolling="yes" allowtransparency="true"></iframe>
+    </div>
+    <div class="mt-8 text-center">
+      <a id="ig-link" href="https://www.instagram.com/" target="_blank" rel="noopener" class="inline-block bg-white text-navy px-8 py-4 cap text-xs hover:bg-sky hover:text-white transition">Ver el perfil en Instagram</a>
     </div>
   </div>
 </section>
@@ -347,7 +362,7 @@ a:focus-visible{outline:2px solid #1565B5;outline-offset:3px}
                   <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div>
                 </div>
               </div>
-              <div style="padding: % 0;"></div>
+              <div style="padding: 19% 0;"></div>
               <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 50px;">
                 <p style="font-family:Arial,sans-serif; font-size:14px; font-weight:600; line-height:18px; margin:0 0 0 0; text-align:center;">Ver esta publicación en Instagram</p>
               </div>
@@ -447,6 +462,18 @@ const GOOGLE = {
 <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.umd.js"></script>
 <script>
 (function(){
+  /* ===== INSTAGRAM: escribe aquí el usuario SIN @ (ej.: 'teresaherreros'). Mientras esté vacío, la sección se oculta. ===== */
+  var IG_USER='';
+
+  var igSec=document.getElementById('resultados');
+  if(IG_USER){
+    document.getElementById('ig-frame').src='https://www.instagram.com/'+IG_USER+'/embed';
+    document.getElementById('ig-link').href='https://www.instagram.com/'+IG_USER+'/';
+    igSec.hidden=false;
+  }else{
+    [].forEach.call(document.querySelectorAll('[data-ig-link]'),function(a){a.remove()});
+  }
+
   var b=document.getElementById('burger'),n=document.getElementById('mnav');
   function tog(o){b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Cerrar menú':'Abrir menú');n.classList.toggle('hidden',!o)}
   b.addEventListener('click',function(){tog(b.getAttribute('aria-expanded')!=='true')});
